@@ -4,6 +4,10 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
+import HeroDesc from "../components/heroDesc.js"
+import ImageSliderHero from "../components/imagesliderhero"
+import HeaderFont from "../fonts/asado-regular-text.otf"
+import BodyFont from "../fonts/asado-body-text.ttf"
 
 const IndexPage = ({
   data: {
@@ -18,15 +22,43 @@ const IndexPage = ({
 
   return (
     <Layout>
+
       <Helmet>
+        <link 
+          rel="preload"
+          as="font"
+          href={HeaderFont}
+          type="font/otf"
+          crossOrigin="anonymous" 
+        />
+        <link 
+          rel="preload"
+          as="font"
+          href={BodyFont}
+          type="font/ttf"
+          crossOrigin="anonymous" 
+        />
         <title>{site.siteMetadata.title}</title>
         <meta name="description" content={site.siteMetadata.description} />
       </Helmet>
-      <HeroHeader/>
-      <h2>Blog Posts &darr;</h2>
+
+
+      <ImageSliderHero />
+      
+      <div className="site-section" style={{background: "#fcb632"}}>
+        <div className="center-wrapper">
+          <HeroHeader/>
+        </div>
+      </div>
+      <div className="site-section">
+        <div className="center-wrapper">
+          <HeroDesc/>
+        </div>
+      </div>
+      {/* <h2>Blog Posts &darr;</h2>
       <div className="grids">
         {Posts}
-      </div>
+      </div> */}
     </Layout>
   )
 }

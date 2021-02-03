@@ -1,7 +1,12 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Navigation from "../components/navigation"
-import 'prismjs/themes/prism-okaidia.css';
+import ThemeChanger from "../components/themeChanger"
+import "prismjs/themes/prism-okaidia.css"
+
+
+import NavLogo from "../images/asado-barca-logo.png"
+
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -16,17 +21,24 @@ export default ({ children }) => {
     `
   )
   return (
-    <div className="site-wrapper">
-      <header className="site-header">
-        <div className="site-title">
-          <Link to="/">{data.site.siteMetadata.title}</Link>
+    <>
+      <div className="site-section" style={{borderBottom: "10px solid #fcb632"}}>
+        <div className="center-wrapper">
+          <header className="site-header">
+          <ThemeChanger/>
+            <div className="site-title">
+              <Link to="/"><img src={NavLogo} style={{width: "6rem", height: "6rem"}} /></Link>
+            </div>
+            <Navigation />
+          </header>
         </div>
-        <Navigation />
-      </header>
-      {children}
-      <footer className="site-footer">
-        <p>&copy; {new Date().getFullYear()} Delog &bull; Crafted with <span role="img" aria-label="love">❤️</span> by <a href="https://w3layouts.com">W3Layouts</a></p>
-      </footer>
-    </div>
+      </div>
+      <div className="site-section">
+        {children}
+        <footer className="site-footer">
+          <p>&copy; {new Date().getFullYear()} Asado Barcalona &bull; Created by <a href="https://rowangordon.co.uk">Rowan Gordon</a></p>
+        </footer>
+      </div>
+    </>
   )
 }

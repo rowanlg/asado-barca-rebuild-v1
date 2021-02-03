@@ -3,11 +3,10 @@ import { StaticQuery, graphql, Link } from "gatsby"
 export default () => (
   <StaticQuery
     query={graphql`
-      query HeadingQuery {
+      query HeadingDescQuery {
         site {
           siteMetadata {
             home {
-              title
               description
             }
           }
@@ -15,9 +14,11 @@ export default () => (
       }
     `}
     render={data => (
-      <div className="hero-header" style={{textAlign: "center"}}>
-        <div className="headline">{data.site.siteMetadata.home.title}</div>
-        {/* <Link to='/contact' className="button -primary">Get in touch &rarr;</Link> */}
+      <div className="hero-header">
+        <div 
+          className="primary-content" 
+          dangerouslySetInnerHTML={{ __html: data.site.siteMetadata.home.description}}
+        />
       </div>
     )}
   />

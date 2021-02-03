@@ -1,3 +1,21 @@
+/*
+
+Asado Colours
+
+Off White - #fffaf1
+Green - #024443
+Gold - #fcb632
+Dark Blue - #02223b
+
+
+@keyframes colorBackground {
+  0% {background-color: #fcb632;}
+  40% {background-color: #fcb632;}
+  100% {background-color: transparent;display: none;}
+}
+*/
+
+
 $font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
 html,
@@ -8,34 +26,15 @@ body {
 * {
   margin-top: 0
 }
-body.light {
-  --primary-color: #381696;
-  --primary-text-color: #fff;
-  --featured-bg: #493b8a;
-  --featured-text: #fff;
-  --secondary-color: #10072b;
-  --background: #fff;
-  --site-header: var(--background);
-  --card-bg: #fff;
-  --card-bdr: #eee;
-  --card-shadow: #d5d5d5;
-  --btn-bg: var(--background);
-  --btn-bdr: #d3d6e7;
-  --btn-text-color: #868892;
-  --btn-hover-bg: var(--btn-bdr);
-  --btn-hover-text-color: #00062b;
-  --contact-bg: #f7f8fe;
-  --contact-bdr: #d3d6e7;
-  --input-bg: var(--background);
-}
-body.dark {
-  --primary-color: #9984d5;
+
+body {
+  --primary-color: #fcb632;
   --primary-text-color: #fff;
   --featured-bg: #66578d;
   --featured-text: #fff;
   --secondary-color: #66578d;
-  --background: #0A041A;
-  --text-color: rgba(255,255,255,0.88);
+  --background: #024443;
+  --text-color: #fafaf1;
   --text-secondary-color: rgba(255,255,255,0.66);
   --site-header: var(--background);
   --card-bg: #181326;
@@ -49,11 +48,10 @@ body.dark {
   --contact-bg: var(--card-shadow);
   --contact-bdr: var(--card-bg);
   --input-bg: var(--card-bg);
-}
-/* System Fonts as used by Medium and WordPress */
-body {
-  font-family: $font-family;
-  border-top: 10px solid var(--primary-color);
+
+  font-family: "Bebas Neue";
+  //border-top: 10px solid var(--primary-color);
+  //border-bottom: 10px solid var(--primary-color);
   background-color: var(--background);
   color: var(--text-color);
 }
@@ -68,9 +66,10 @@ a {
   padding: 32px;
   max-width: 1140px;
   margin: 0 auto;
-  img {
-    max-width: 100%;
-  }
+  border: solid white;
+  // img {
+  //   max-width: 100%;
+  // }
 }
 .navigation {
   display: flex;
@@ -95,10 +94,11 @@ a {
 .site-header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  //padding: 20px 0;
   background: var(--site-header);
-  margin-bottom: 32px;
+  //margin-bottom: 32px;
   align-items: center;
+  
 }
 .site-title a {
   color: var(--primary-color);
@@ -107,13 +107,14 @@ a {
   text-transform: uppercase;
 }
 .hero-header {
-  padding: 0 0 64px;
+  //padding: 0 0 64px;
   max-width: 980px;
+  text-shadow: 2px 2px 2px #000000;
 }
 .headline {
   font-size: 36px;
   font-weight: 900;
-  margin-bottom: 0.5rem;
+  //margin-bottom: 0.5rem;
 }
 .button {
   padding: 18px 27px;
@@ -404,4 +405,47 @@ body.light {
     box-shadow: 0 0 0 2px;
     top: 8px;
     left: 2px
+}
+
+
+
+
+.site-section {
+  //border: solid green;
+}
+
+.center-wrapper {
+  padding: 32px;
+  max-width: 1140px;
+  margin: 0 auto;
+  //border: solid white;
+  // img {
+  //   max-width: 100%;
+  // }
+}
+
+
+.burger-menu {
+  cursor: pointer;
+  div {
+    width: 1.2rem;
+    height: 0.2rem;
+    background: var(--text-color);
+    margin: 0.2rem 1rem;
+  }
+}
+
+
+
+
+.imageSliderWrapper {
+  position: relative;
+  //width: 100vw !important;
+  height: 86vh !important;
+  z-index: 1;
+  /*
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  */
 }

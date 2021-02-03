@@ -1,9 +1,9 @@
 {
-  "title": "Delog",
-  "siteUrl": "https://delog-w3layouts.netlify.com/",
-  "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
+  "title": "Asado Barcelona",
+  "siteUrl": "https://asadobarcelona.com/",
+  "description": "¡Las hamburguesas asado han llegado a Barcelona! Las hamburguesas más sabrosas con los mejores ingredientes de la tierra de Cataluña, para entrega, recogida y comer aquí pronto.",
   "home": {
-    "title": "Hi! I'm Delog",
-    "description": "I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)"
+    "title": "Bienvenido a Asado Barcelona",
+    "description": "Cocinadas sobre parrilla de carbón y madera vegetal, usando los ingredientes locales de mejor calidad, en Asado hemos creado una de las hamburguesas más deliciosas que hayas probado. Usando influencias de la comida suramericana, española, británica y otros sabores del mundo."
   }
 }
