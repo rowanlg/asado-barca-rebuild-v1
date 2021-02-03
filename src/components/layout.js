@@ -22,7 +22,7 @@ export default ({ children }) => {
   )
   return (
     <>
-      <div className="site-section" style={{borderBottom: "10px solid #fcb632"}}>
+      <div className="site-section" style={{border: "10px solid #fcb632"}}>
         <div className="center-wrapper">
           <header className="site-header">
           <ThemeChanger/>
